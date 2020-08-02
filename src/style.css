@@ -1,0 +1,349 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+select,
+button {
+  outline: none;
+  border: none;
+}
+
+body {
+  background: #ffce11;
+}
+
+li {
+  list-style: none;
+}
+
+.globalHead {
+  margin: 0 20px 0 20px;
+}
+.globalHead > .search {
+  margin-top: 30px;
+}
+.globalHead > .search > form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.globalHead > .search form > select {
+  border-radius: 20px 0 0 20px;
+  background-color: white;
+  color: #5b4b0e;
+  min-height: 35px;
+  max-width: 75px;
+  padding-left: 7px;
+  font-weight: 700;
+  position: relative;
+}
+.globalHead > .search .s--text {
+  height: 36px;
+  padding-left: 27px;
+  width: 500px;
+}
+
+@media (max-width: 500px) {
+  .globalHead > .search .s--text {
+    width: 220px;
+  }
+}
+@media (max-width: 400px) {
+  .globalHead > .search .s--text {
+    width: 200px;
+  }
+}
+@media (max-width: 375px) {
+  .globalHead > .search .s--text {
+    width: 170px;
+  }
+}
+
+.search form .s-text::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url(../img/search.png);
+  background-size: cover;
+  position: absolute;
+  top: 5px;
+}
+
+.globalHead > .search .s-text button {
+  min-height: 35px;
+  min-width: 70px;
+  border-radius: 0 20px 20px 0;
+  background-color: #625a5a;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  left: -5px;
+  top: 1px;
+}
+
+.globalMain {
+  margin: 0 25px 0 25px;
+}
+.globalMain .top {
+  position: relative;
+  margin-top: 10px;
+}
+.globalMain .top .img {
+  width: 150px;
+  height: 82px;
+  background: url(../img/dog1.gif);
+  background-size: cover;
+  margin-left: 15px;
+  background-position: -1px -1px;
+}
+.globalMain .top .top-right p {
+  position: absolute;
+  right: 45px;
+  bottom: 3px;
+  font-weight: 600;
+  color: #332b2b;
+}
+
+.globalMain .top .top-right .img2 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 15px;
+  bottom: 2px;
+  background: url(../img/play.png);
+  background-size: cover;
+}
+.globalMain .among {
+  position: relative;
+  /* border: 1px solid green; */
+
+  background: rgba(06, 06, 06, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.globalMain .among .siteList {
+  min-height: 260px;
+  overflow: auto;
+}
+
+.globalMain .among .site,
+.last-site {
+  margin: 10px 25px;
+  height: 35px;
+  border-radius: 20px;
+  background: rgba(255, 248, 248, 0.5);
+}
+
+.globalMain .among .site {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 20px;
+  position: relative;
+}
+.among .-blank {
+  height: 20px;
+}
+
+.globalMain .among .site > .s-left {
+  width: 43px;
+  height: 35px;
+  background: #ffce11;
+  border-radius: 10px 0px 0px 10px;
+  position: relative;
+}
+
+.globalMain .among .site > .s-left::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/box.png);
+  background-size: cover;
+  position: absolute;
+  left: 7px;
+  top: 3px;
+}
+
+.globalMain .among .site > .s-center {
+  width: 80px;
+  height: 28px;
+  border-right: 1px solid #5b4b0e;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 5px;
+  padding-right: 3px;
+  line-height: 28px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 15px;
+}
+.globalMain .among .site > .s-right {
+  height: 35px;
+  width: 200px;
+  padding-left: 5px;
+  line-height: 35px;
+  padding-right: 3px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.globalMain .among .site .close {
+  background: url("../img/delete.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: -5px;
+  top: -3px;
+}
+
+.globalMain .among .last-site .last-p {
+  text-align: center;
+  line-height: 35px;
+  height: 35px;
+  color: #5b4b0e;
+  font-size: 14px;
+  /* letter-spacing: 1px; */
+}
+
+.among .dialogBox {
+  display: none;
+}
+.among .dialog {
+  min-width: 300px;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 10px;
+  min-height: 180px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.among .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(06, 06, 06, 0.7);
+}
+.among .dialog form {
+  position: relative;
+}
+.among .dialog form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.among .dialog label input {
+  min-width: 250px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  min-height: 30px;
+}
+.among .dialog form #dialog-submit {
+  min-width: 60px;
+  min-height: 30px;
+  border: 1px solid #000;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: -45px;
+  border-radius: 10px;
+}
+
+@media (min-width: 800px) {
+  .site .close {
+    opacity: 0;
+  }
+  .siteList,
+  .last-site {
+    min-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .siteList .s-center {
+    min-width: 200px;
+  }
+  .globalMain {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 400px;
+    font-size: 24px;
+  }
+  .site {
+    margin-top: 20px;
+  }
+  .siteList li {
+    transform: scale(0.96);
+  }
+  .siteList li:hover {
+    transform: scale(1);
+    transition: scale 0.6s;
+    color: rgba(51, 22, 5, 0.986);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    font-weight: 580;
+    cursor: pointer;
+  }
+
+  .siteList li:hover .close {
+    opacity: 1;
+    transition: opacity 0.75s;
+  }
+  .siteList::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  .among {
+    max-height: 400px;
+  }
+  .globalMain .among .site {
+    min-height: 45px;
+  }
+  .globalMain .among .site > .s-left {
+    width: 53px;
+    height: 45px;
+  }
+  .globalMain .among .site > .s-left::before {
+    width: 40px;
+    height: 40px;
+  }
+  .globalMain .among .site > .s-center {
+    font-size: 18px;
+  }
+  .globalMain .among .site > .s-right {
+    font-size: 17px;
+  }
+  .globalMain .among .site .close {
+    background-size: 25px 25px;
+    right: 3px;
+    top: 2px;
+  }
+}
